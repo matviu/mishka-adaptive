@@ -8,13 +8,50 @@
 </head>
 <body class="body-index">
   <header class="page-header">
-    <div class="page-header__inner-wrapper">
-      <picture>
-        <source media="(min-width: 768px)" srcset="">
-        <source media="(min-width: 1150px)" srcset="">
-        <img src="" alt="MISHKA" class="page-header__logo">
-      </picture>
-    </div>
+    <nav class="main-nav main-nav_closed main-nav_nojs">
+      <div class="main-nav__visible">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.png">
+          <source media="(min-width: 768px)" srcset="img/header-logo-tablet.png">
+          <a href="index.html">
+            <img src="img/header-logo-mobile.png" alt="MISHKA" class="main-nav__logo">
+          </a>
+        </picture>
+        <button class="main-nav__toggle" type="button"></button>
+      </div>
+
+      <div class="mobile-nav-wrapper">
+        <ul class="main-nav__list main-nav__list1">
+          <li class="main-nav__item main-nav__item_catalog">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item_order">
+            <a href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list main-nav__list2">
+          <li class="main-nav__item main-nav__item_search">
+            <a href="#"><img class="main-nav__search-icon" src="img/search.svg" alt="Поиск"><span>Поиск по сайту</span></a>
+          </li>
+          <li class="main-nav__item main-nav__item_cart">
+            <a href="#">Корзина: <span>Пока пуста</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="main-nav__list main-nav__list3">
+        <li class="main-nav__item_new">
+          <a href="catalog.html">Новые поступления</a>
+        </li>
+        <li class="main-nav__item_sale">
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+      <span class="main-nav__delivery">Бесплатная доставка по России</span>
+    </nav>
   </header>
+
+
 </body>
+<script src="js/javascript.js"></script>
 </html>
