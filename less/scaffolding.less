@@ -5,3 +5,30 @@ html {
 * {
   box-sizing: inherit;
 }
+
+.ghost-btn {
+  padding: 16px 0;
+
+  background-color: transparent;
+  border: 2px solid #444444;
+
+  font-family: "open sans", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255,255,255,0.3);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

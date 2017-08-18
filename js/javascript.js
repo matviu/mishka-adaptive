@@ -2,7 +2,8 @@
 
 var navToggle = document.querySelector('.main-nav__toggle');
 var mainNav = document.querySelector('.main-nav');
-var mainNavMenu = document.querySelector('.mobile-nav-wrapper');
+var mainNavMenu1 = document.querySelector('.main-nav__list1');
+var mainNavMenu2 = document.querySelector('.main-nav__list2');
 
 mainNav.classList.remove("main-nav_nojs");
 

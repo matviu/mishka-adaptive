@@ -10,34 +10,33 @@
   <header class="page-header">
     <nav class="main-nav main-nav_closed main-nav_nojs">
       <div class="main-nav__visible">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.png">
-          <source media="(min-width: 768px)" srcset="img/header-logo-tablet.png">
-          <a href="index.html">
+        <a class="main-nav__logo-wrapper" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/header-logo-tablet.png">
             <img src="img/header-logo-mobile.png" alt="MISHKA" class="main-nav__logo">
-          </a>
-        </picture>
+          </picture>
+        </a>
         <button class="main-nav__toggle" type="button"></button>
       </div>
 
-      <div class="mobile-nav-wrapper">
-        <ul class="main-nav__list main-nav__list1">
-          <li class="main-nav__item main-nav__item_catalog">
-            <a href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item main-nav__item_order">
-            <a href="#">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list main-nav__list2">
-          <li class="main-nav__item main-nav__item_search">
-            <a href="#"><img class="main-nav__search-icon" src="img/search.svg" alt="Поиск"><span>Поиск по сайту</span></a>
-          </li>
-          <li class="main-nav__item main-nav__item_cart">
-            <a href="#">Корзина: <span>Пока пуста</span></a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list main-nav__list1">
+        <li class="main-nav__item main-nav__item_catalog">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item main-nav__item_order">
+          <a href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list main-nav__list2">
+        <li class="main-nav__item main-nav__item_search">
+          <a href="#"><img class="main-nav__search-icon" src="img/search.svg" alt="Поиск"><span>Поиск по сайту</span></a>
+        </li>
+        <li class="main-nav__item main-nav__item_cart">
+          <a href="#">Корзина: <span>Пока пуста</span></a>
+        </li>
+      </ul>
+
 
       <ul class="main-nav__list main-nav__list3">
         <li class="main-nav__item_new">
@@ -50,6 +49,69 @@
       <span class="main-nav__delivery">Бесплатная доставка по России</span>
     </nav>
   </header>
+
+  <main class="main-index">
+
+    <section class="promo">
+      <div class="promo__inner-wrapper">
+        <h2 class="promo__title">Милые штучки ручной<br> работы для дома</h2>
+        <div class="promo__btns">
+          <a href="#" class="promo__btn promo__btn_decor">
+            Предметы<br> интерьера
+          </a>
+          <a href="#" class="promo__btn promo__btn_toys">
+            Детские<br> игрушки
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="week-product">
+      <div class="week-product__inner-wrapper">
+
+        <div class="week-product__headline">
+          <h2 class="week-product__title">Вязаные корзинки</h2>
+          <span class="week-product__mark">Товар недели</span>
+        </div>
+        <div class="week-product__info">
+          <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="week-product__stats">
+            <tr>
+              <td>Цвет:</td>
+              <td>"Тиффани"/серый</td>
+            </tr>
+            <tr>
+              <td>Диаметр:</td>
+              <td>25 см</td>
+            </tr>
+            <tr>
+              <td>Высота:</td>
+              <td>15 см</td>
+            </tr>
+          </table>
+        </div>
+        <div class="week-product__photo-container">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/product-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/product-tablet.jpg">
+            <img class="week-product__photo" src="img/product-mobile.jpg" alt="Фото">
+          </picture>
+        </div>
+        <div class="week-product__purchase">
+          <div class="week-product__price">
+            Цена: <span>990 руб.</span>
+          </div>
+          <button class="week-product__order-btn ghost-btn" type="button">Заказать</button>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+
 
 
 </body>

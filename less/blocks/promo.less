@@ -1,0 +1,158 @@
+.promo {
+  background-color: #f9f9f9;
+}
+
+.promo__inner-wrapper {
+  .container;
+
+  background-image: url("../img/promo-bg.jpg");
+  background-repeat:  no-repeat;
+  background-position: 50% -64%;
+  background-size: 200%;
+
+}
+
+.promo__title {
+  padding: 85px 30px 110px;
+  margin: 0;
+
+  font-family: verdana, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.promo__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__btn {
+  position: relative;
+
+  padding: 28px 0 28px 30px;
+
+  font-family: tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+
+    background: url("../img/promo-sprite.png") no-repeat;
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: rgba(255,255,255, 0.3);
+  }
+}
+
+.promo__btn_decor {
+  background-color: #63d1bb;
+
+  &::after {
+    background-position: 18px 11px;
+  }
+
+  &:hover {
+    background-color: #59d5bc;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.promo__btn_toys {
+  background-color: #56c3b2;
+
+  &::after {
+    background-position: -94px 11px;
+  }
+
+  &:hover {
+    background-color: #46c1ae;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media @tablet-width {
+
+  .promo {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+
+      height: 24px;
+
+      background: url("../img/zigzag-white.png") no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .promo__inner-wrapper {
+    background-size: 170%;
+    background-position: 50% 50%;
+  }
+
+  .promo__title {
+    padding: 145px 70px 355px;
+
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .promo__title br {
+    display: none;
+  }
+
+  .promo__btns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .promo__btn {
+    flex-grow: 1;
+  }
+}
+
+@media @desktop-width {
+
+  .promo__inner-wrapper {
+    background-size: 110%;
+    background-position: 50% 100%;
+  }
+
+  .promo__title {
+    padding: 165px 195px 360px;
+
+    font-size: 50px;
+    line-height: 57px;
+  }
+}

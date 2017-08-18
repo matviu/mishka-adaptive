@@ -16,9 +16,10 @@
 
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
 }
 
-.main-nav__visible picture {
+.main-nav__logo-wrapper {
   margin: 0 auto;
 }
 
@@ -49,6 +50,7 @@
   padding: 27px 0;
   padding-left: 76px;
 
+  background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 
   font-size: 16px;
@@ -190,12 +192,37 @@
     }
   }
 
-  .mobile-nav-wrapper {
+  .main-nav__visible {
+    z-index: 5;
+  }
+
+  .main-nav__list1,
+  .main-nav__list2 {
     position: absolute;
+    z-index: 4;
     width: 100%;
   }
 
-  .main-nav_closed .mobile-nav-wrapper {
+  .main-nav__list2 {
+    top: 238px;
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-1000px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .main-nav_opened .main-nav__list1,
+  .main-nav_opened .main-nav__list2 {
+    animation: slideDown 0.5s;
+  }
+
+  .main-nav_closed .main-nav__list1,
+  .main-nav_closed .main-nav__list2 {
     display: none;
   }
 
@@ -203,21 +230,194 @@
     display: none;
   }
 
-  .main-nav_nojs .mobile-nav-wrapper {
+  .main-nav_nojs .main-nav__list1,
+  .main-nav_nojs .main-nav__list2 {
     position: static;
     display: block;
   }
 
 }
 
-
-
-
-
-
-
 .main-nav__search-icon,
 .main-nav__list3,
 .main-nav__delivery {
   display: none;
+}
+
+@media @tablet-width {
+
+  .page-header {
+    border-bottom: 1px solid #ececec;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__visible {
+    display: inline-flex;
+    padding: 0;
+  }
+
+  .main-nav__list2 {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .main-nav__list2 a {
+
+    &:hover {
+      background-color: #ffffff;
+      color: rgba(0,0,0,0.6);
+    }
+
+    &:active {
+      background-color: #ffffff;
+      color: rgba(0,0,0,0.3);
+    }
+  }
+
+  .main-nav__item_search span {
+    display: none;
+  }
+
+  .main-nav__item a {
+    border: none;
+  }
+
+  .main-nav__item_search a {
+    height: 100%;
+    padding-left: 41px;
+    padding-right: 41px;
+
+
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .main-nav__list1 {
+    flex-direction: row;
+
+    position: absolute;
+    z-index: 5;
+    bottom: -35px;
+  }
+
+
+  @media @tablet-width-only {
+
+    .main-nav__list1 a {
+      padding: 0;
+      margin-right: 35px;
+
+      background-color: transparent;
+
+      font-size: 14px;
+      line-height: 24px;
+
+      &:hover {
+        background-color: transparent;
+        color: rgba(0,0,0,0.6);
+      }
+
+      &:active {
+        background-color: transparent;
+        color: rgba(0,0,0,0.3);
+      }
+    }
+  }
+
+  .main-nav__delivery {
+    display: block;
+
+    position: absolute;
+    z-index: 5;
+    bottom: -35px;
+    right: 0;
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #444444;
+  }
+}
+
+@media @desktop-width {
+
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .main-nav__visible {
+    margin-right: 65px;;
+  }
+
+  .main-nav__list1 {
+    position: static;
+    order: -1;
+  }
+
+  .main-nav__list1 a {
+    padding-left: 35px;
+    padding-right: 35px;
+
+    &:hover {
+      background-color: #ffffff;
+      color: rgba(0,0,0,0.6);
+    }
+
+    &:active {
+      background-color: #ffffff;
+      color: rgba(0,0,0,0.3);
+    }
+  }
+
+  .main-nav__item_catalog a {
+    padding-left: 0;
+    border-right: 1px solid #ececec;
+  }
+
+  .main-nav__list3 {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    z-index: 5;
+    bottom: -45px;
+    left: 0;
+  }
+
+  .main-nav__list3 a {
+    padding: 0;
+    margin-right: 60px;
+
+    background-color: transparent;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background-color: transparent;
+      color: rgba(0,0,0,0.6);
+    }
+
+    &:active {
+      background-color: transparent;
+      color: rgba(0,0,0,0.3);
+    }
+  }
+
+  .main-nav__delivery {
+    bottom: -45px;
+  }
+
+
 }
