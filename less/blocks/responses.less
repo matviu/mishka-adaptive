@@ -4,22 +4,21 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -105px;
+    bottom: -20px;
     left: 0;
     right: 0;
 
     height: 40px;
 
     background: url("../img/zigzag-grey.png") no-repeat;
+    background-position: center;
     background-size: 100%;
   }
 }
 
 .responses__inner-wrapper {
   .container;
-  padding: 30px 30px;
-
-  margin-bottom: 150px;
+  padding: 30px 30px 46px 30px;
 
   font-family: verdana, sans-serif;
 }
@@ -128,6 +127,10 @@
     background-image: url("../img/responses-bg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+
+    &:after {
+      bottom: -90px;
+    }
   }
 
   .responses__inner-wrapper {
@@ -137,6 +140,7 @@
     padding-right: 0;
     padding-bottom: 30px;
     padding-top: 30px;
+    margin-bottom: 80px;
 
     display: flex;
     flex-wrap: wrap;
@@ -194,8 +198,16 @@
 
 @media @desktop-width {
 
+  .responses {
+    background-image: none;
+  }
+
   .responses__inner-wrapper {
     padding-left: 175px;
+
+    background-image: url("../img/responses-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .responses__title {

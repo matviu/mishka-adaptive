@@ -25,6 +25,8 @@
 
 .main-nav__logo {
 
+  transition: opacity 0.3s;
+
   &:hover {
     opacity: 0.6;
   }
@@ -48,7 +50,7 @@
 
   display: block;
   padding: 27px 0;
-  padding-left: 76px;
+  padding-left: 23%;
 
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -58,6 +60,8 @@
   font-weight: bold;
   text-decoration: none;
   color: #000000;
+
+  transition: background-color 0.5s;
 
   &:hover {
     background-color: #f1f1f1;
@@ -69,49 +73,32 @@
   }
 }
 
-.main-nav__item_search a,
-.main-nav__item_cart a {
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 30px;
-    width: 22px;
-    height: 22px;
+.search-icon,
+.cart-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  left: 10%;
 
-    background: url("../img/search&cart-icon.png") no-repeat;
-  }
+  fill: #231F20;
+  opacity: 0.2;
+
+  transition: opacity 0.3s, fill 0.3s;
 }
 
-.main-nav__item_search a {
-
-  &::before {
-    background-position: 2px 0px;
-  }
-
-  &:hover::before {
-    background-position: 2px -63px;
-  }
-
-  &:active::before {
-    background-position: 2px -130px;
-  }
+.main-nav__item_search:hover .search-icon,
+.main-nav__item_cart:hover .cart-icon {
+  fill: #63d1bb;
+  opacity: 1;
 }
 
-.main-nav__item_cart a {
-
-  &::before {
-    background-position: -49px 2px;
-  }
-
-  &:hover::before {
-    background-position: -49px -62px;
-  }
-
-  &:active::before {
-    background-position: -49px -128px;
-  }
+.main-nav__item_search:active .search-icon,
+.main-nav__item_cart:active .cart-icon {
+  opacity: 0.3;
 }
+
+
 
 @media @mobile-width-only {
 
@@ -265,6 +252,7 @@
   }
 
   .main-nav__list2 {
+    display: inline-flex;
     flex-direction: row;
     align-items: stretch;
   }
@@ -292,12 +280,32 @@
 
   .main-nav__item_search a {
     height: 100%;
-    padding-left: 41px;
-    padding-right: 41px;
-
+    min-width: 84px;
 
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
+  }
+
+  .search-icon {
+    top: 50%;
+    margin-top: -9px;
+    left: 50%;
+    margin-left: -9px;
+  }
+
+  .main-nav__list2 {
+    width: auto;
+  }
+
+  .main-nav__item_cart a {
+
+      min-width: 263px;
+      max-width: 100%;
+  }
+
+  .cart-icon {
+    top: 50%;
+    margin-top: -9px;
   }
 
   .main-nav__list1 {
@@ -307,7 +315,6 @@
     z-index: 5;
     bottom: -35px;
   }
-
 
   @media @tablet-width-only {
 

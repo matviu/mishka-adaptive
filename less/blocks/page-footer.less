@@ -66,7 +66,7 @@
 }
 
 .page-footer__copyright {
-  padding: 22px 0 20px;
+  padding: 18px 0 14px;
 
   text-align: center;
   font-family: verdana, sans-serif;
@@ -80,6 +80,18 @@
   vertical-align: middle;
 
   margin-left: 15px;
+}
+
+.page-footer__copyright-svg {
+  fill: #63d1bb;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-width {
@@ -97,6 +109,17 @@
   .page-footer__logo {
     display: block;
     padding-right: 78px;
+  }
+
+  .page-footer__logo-svg {
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__social-wrapper {
