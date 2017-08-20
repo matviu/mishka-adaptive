@@ -16,3 +16,29 @@ navToggle.onclick = function(e) {
       mainNav.className.replace("main-nav_opened", "main-nav_closed");
   }
 }
+
+/*-------------------responses-slider----------------------*/
+var responsesSlideIndex = 1;
+showResponsesSlide(responsesSlideIndex);
+
+function plusRsponsesSlide(n) {
+  showResponsesSlide(responsesSlideIndex += n)
+}
+
+function showResponsesSlide(n) {
+
+  var responsesContainer = document.querySelector('.responses__container');
+
+  if(n < 1) {responsesSlideIndex = 3};
+  if(n > 3) {responsesSlideIndex = 1};
+
+  if(responsesSlideIndex == 1) {
+    responsesContainer.style.transform = "translateX(0)";
+  } else
+  if (responsesSlideIndex == 2) {
+    responsesContainer.style.transform = "translateX(-33.333333%)";
+  } else
+  if (responsesSlideIndex == 3) {
+    responsesContainer.style.transform = "translateX(-66.666666%)";
+  }
+}
