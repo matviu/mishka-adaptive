@@ -1,0 +1,48 @@
+.inner-page__title {
+  background-color: #f1f1f1;
+}
+
+.inner-page__title h1 {
+  .container;
+
+  min-height: 176px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 74px 30px;
+
+  text-align: center;
+  font-family: verdana, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+@media @tablet-width {
+
+  .inner-page__title {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+
+      height: 24px;
+
+      background: url("../img/zigzag-white.png") no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .inner-page__title h1 {
+    min-height: 230px;
+    padding: 90px 30px;
+
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+}
