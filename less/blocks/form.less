@@ -1,0 +1,435 @@
+.form {
+  font-family: verdana, sans-serif;
+}
+
+.form__promo {
+  .container;
+  padding: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-family: "open sans", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+
+  & br {
+    display: none;
+  }
+}
+
+.form__fieldset {
+  .container;
+
+  padding: 0 30px;
+
+  border: none;
+}
+
+.form__title {
+  position: relative;
+  padding-right: 30px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  font-family: "open sans", sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #62d1ba;
+  text-transform: uppercase;
+
+  & span {
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+
+    height: 1px;
+    background-color: #62d1ba;
+  }
+}
+
+.form__fieldset_type label {
+  position: relative;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  padding-left: 63px;
+
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: bold;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.visible-radiobox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -18px;
+  width: 37px;
+  height: 37px;
+  box-shadow: 0 0 0 2px #444444;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  background-clip: content-box;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+      box-shadow: 0 0 0 2px #62d1ba;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px rgba(68,68,68, 0.3);
+  }
+}
+
+.invisible-radiobox:checked + .visible-radiobox {
+  background-color: #62d1ba;
+}
+
+.invisible-radiobox {
+  display: none;
+}
+
+.form__fieldset_color label {
+  position: relative;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 63px;
+  margin-bottom: 15px;
+
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.visible-checkbox {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 0;
+  height: 41px;
+  width: 41px;
+  border: 2px solid #444444;
+  overflow: hidden;
+
+  background-image: url('../img/tick-mobile.png');
+  background-repeat: no-repeat;
+  background-position: -100px -100px;
+
+  transition: background-position 0.2s;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:active {
+    border-color: rgba(68,68,68, 0.3);
+  }
+}
+
+.invisible-checkbox:checked + .visible-checkbox {
+  background-position: 50% 50%;
+}
+
+.invisible-checkbox {
+  display: none;
+}
+
+.textfield {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: 400;
+
+  background-color: transparent;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__fieldset_fullname label {
+  display: block;
+  margin-bottom: 25px;
+
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.form__fieldset_fullname input {
+  display: block;
+  width: 100%;
+}
+
+.textfield.tel-icon {
+  width: 100%;
+  padding-right: 40px;
+
+  background-image: url("../img/phone&email-icon.png");
+  background-repeat: no-repeat;
+  background-position: right 10px;
+
+  &:hover {
+    background-position: right 3px  top -42px;
+  }
+}
+
+.textfield.letter-icon {
+  width: 100%;
+  padding-right: 40px;
+
+  background-image: url("../img/phone&email-icon.png");
+  background-repeat: no-repeat;
+  background-position: right 5px top -109px;
+
+  &:hover {
+    background-position: right 6px  top -157px;
+  }
+}
+
+.form__fieldset_additional {
+  padding-bottom: 30px;
+}
+
+textarea.textfield {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+
+  border: 2px solid #000000;
+}
+
+.submit-wrapper {
+  .container;
+  padding: 30px;
+
+  & span {
+    display: none;
+  }
+}
+
+
+
+.form__submit {
+  width: 100%;
+}
+
+@media @tablet-width {
+
+  .form-wrapper_grey {
+    background-color: #f1f1f1;
+  }
+
+  .form__promo {
+    padding-left: 0;
+    padding-right: 0;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .form__fieldset {
+    position: relative;
+
+    padding-right: 0;
+    padding-left: 167px;
+  }
+
+  .form__title {
+    position: absolute;
+    left: 0;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    & span {
+      background-color: transparent;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__fieldset_type {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .form__fieldset_type label {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .visible-radiobox {
+    margin-top: -24px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 0 0 2px #444444;
+    border: 13px solid transparent;
+  }
+
+  .form__fieldset_color {
+    padding-top: 60px;
+    padding-bottom: 35px;
+  }
+
+  .form__fieldset_color label {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 24px;
+  }
+
+  .visible-checkbox {
+    margin-top: -26px;
+    left: 0;
+    height: 52px;
+    width: 52px;
+    border: 2px solid #444444;
+    overflow: hidden;
+
+    background-image: url('../img/tick-tablet.png');
+    background-repeat: no-repeat;
+    background-position: -100px -100px;
+  }
+
+  .form__fieldset_fullname {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .form__fieldset_fullname label {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__fieldset_fullname input {
+    display: inline-block;
+    width: auto;
+    margin-left: 25px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    flex-grow: 1;
+  }
+
+  .form__fieldset_tel {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .form__fieldset_tel .textfield {
+    padding-left: 16px;
+    padding-right: 50px;
+
+    background-image: url("../img/phone&email-icon.png");
+    background-repeat: no-repeat;
+    background-position: right 10px  top 10px;
+
+    &:hover {
+      background-position: right 13px  top -42px;
+    }
+  }
+
+  .form__fieldset_email {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .form__fieldset_email .textfield {
+    padding-left: 16px;
+    padding-right: 50px;
+
+    background-image: url("../img/phone&email-icon.png");
+    background-repeat: no-repeat;
+    background-position: right 15px top -109px;
+
+    &:hover {
+      background-position: right 16px  top -157px;
+    }
+  }
+
+  .form__fieldset_additional {
+    padding-top: 60px;
+  }
+
+  .submit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 50px;
+
+    & span {
+      display: inline;
+    }
+  }
+
+  .form__submit {
+    max-width: 230px;
+  }
+}
+
+@media @desktop-width {
+
+  .form__promo {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .form__fieldset {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .form__fieldset_color label {
+    width: calc(100% / 3.05);
+  }
+
+  .submit-wrapper {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+}

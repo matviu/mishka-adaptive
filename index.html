@@ -100,7 +100,7 @@
           <a href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item main-nav__item_order">
-          <a href="#">Вязание на заказ</a>
+          <a href="form.html">Вязание на заказ</a>
         </li>
       </ul>
 
@@ -265,7 +265,31 @@
           </div>
         </div>
         <div class="contacts__visible-map">
-          <div id="yandex-map"></div>
+          <div id="map">
+            <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3G7VakEkqpNwbmKqNdzBQ8KaH9DYA8Nc"></script>
+            <script>
+              function initMap() {
+
+                var coordinates = new google.maps.LatLng('47.212325', '38.933663');
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                      center: coordinates,
+                      zoom: 18,
+                      disableDefaultUI: true,
+                      scrollwheel: false,
+                    });
+
+                var image = 'img/map-pin.png';
+                var marker = new google.maps.Marker ({
+                      position: coordinates,
+                      map: map,
+                      icon: image
+                    });
+              }
+
+              initMap();
+            </script>
+          </div>
         </div>
 
         <button type="button" class="contacts__feedback-btn ghost-btn">Напишите нам</button>
@@ -300,6 +324,6 @@
   </footer>
 
 </body>
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2f2015de3bdf8f32cad1765a21b809efd15fd6a94e17dad89c8394fe5f562bdf&amp;width=100%25&amp;height=455&amp;lang=ru_RU&amp;scroll=true&id=yandex-map"></script>
+
 <script src="js/javascript.js"></script>
 </html>
